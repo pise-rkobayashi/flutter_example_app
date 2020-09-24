@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="stub.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="additionalArgs" value="--dart-define=FLAVOR=stub --dart-define=APP_NAME=stubアプリ" />
+    <option name="filePath" value="$PROJECT_DIR$/test/stub/main.dart" />
+    <method v="2" />
+  </configuration>
+</component>
