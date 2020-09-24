@@ -21,12 +21,25 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def dartEnvironmentVariables = [
+        APP_NAME: 'Flutter Example App',
+        FLAVOR: null
+];
+if (project.hasProperty('dart-defines')) {
+    dartEnvironmentVariables = dartEnvironmentVariables + project.property('dart-defines')
+            .split(',')
+            .collectEntries { entry ->
+                def pair = URLDecoder.decode(entry, 'UTF-8').split('=')
+                [(pair.first()): pair.last()]
+            }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -37,12 +50,12 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "pise.flutter_sample_app"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        resValue "string", "app_name", dartEnvironmentVariables.APP_NAME
     }
 
     buildTypes {
