@@ -2,15 +2,16 @@
 
 Flutter Sample Application
 
-## Getting Started
+## プロジェクトをクローンしたら
 
-This project is a starting point for a Flutter application.
+最初にrun_build_runnerで各自動生成ファイルを生成してください
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## プロジェクトのパッケージ構成
+・app - アプリケーションクラスやビルド時の設定  
+・di - Providerを利用した依存性注入周りの処理  
+・data - Network・DBなどデータ取得・保存API層  
+・model - 共通ロジック・repositoryで扱う用のクラス  
+・repository - data層から各種データの取得を抽象化・modelへ変換する層  
+・feature - ユーザー入力の加工やデータを画面に表示するUI層  
+・navigation - アプリの画面遷移周りの処理  
+・util - その他便利クラス  
