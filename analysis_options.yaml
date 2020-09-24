@@ -1,0 +1,28 @@
+include: package:pedantic/analysis_options.yaml
+analyzer:
+  exclude:
+    - lib/**/**.g.dart
+    - lib/**/**.freezed.dart
+linter:
+  rules:
+    #- camel_case_types
+    - prefer_const_literals_to_create_immutables
+    - cancel_subscriptions
+    - await_only_futures
+    - avoid_void_async
+    - close_sinks
+    - empty_catches
+    - empty_constructor_bodies
+    - empty_statements
+    - prefer_const_constructors
+    - void_checks
+    - valid_regexps
+    - unrelated_type_equality_checks
+    - use_string_buffers
+    - prefer_null_aware_operators
+    - recursive_getters
+    - prefer_final_fields
+    - prefer_final_in_for_each
+    - prefer_final_locals
+    - prefer_collection_literals
+    -

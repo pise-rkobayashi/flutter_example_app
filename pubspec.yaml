@@ -1,0 +1,84 @@
+name: flutter_sample_app
+description: Flutter Sample Application
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# アプリのバージョン設定
+# ビルド名 -> 1.0.0+1 <- ビルド番号
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+  # UserDefault・SharedPreferences
+  shared_preferences: 0.5.6+1
+
+  # DB
+  sqflite: 1.3.0+2
+
+  # API・ネットワーク系
+  dio: ^3.0.10
+  retrofit: ^1.3.4
+
+  # ステート管理
+  provider: ^4.3.2+2
+  flutter_state_notifier: ^0.6.1
+
+  # ネットワーク画像
+  cached_network_image: ^2.3.2+1
+
+  # freezed objectのHelperメソッド生成用のannotation
+  freezed_annotation: ^0.12.0
+  json_annotation: ^3.1.0
+
+  # アプリバージョン取得処理
+  package_info: ^0.4.3
+
+  # UUID
+  uuid: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # TODO DartSDKのバージョンが2.10.0以上になったらbuild_runnerのバージョン上げる
+  build_runner: ^1.10.1
+
+  # TODO analyzerのバージョンが合わないからまだ1.3.7系で
+  retrofit_generator: ^1.3.7+6
+
+  # freezed objectのHelperメソッド生成処理
+  freezed: 0.10.9
+  json_serializable: ^3.5.0
+
+flutter:
+
+  uses-material-design: true
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

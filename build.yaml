@@ -1,0 +1,17 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        generate_for:
+          include:
+            - lib/feature/**/*_state.dart
+            - lib/feature/**/*_item.dart
+            - lib/model/*.dart
+            - lib/model/**/*.dart
+            - lib/data/network/response/*.dart
+            - lib/data/network/response/**/*.dart
+            - test/stub/feature/debug/debug_state.dart
+      retrofit_generator:
+        generate_for:
+          include:
+            - lib/data/network/api.dart
