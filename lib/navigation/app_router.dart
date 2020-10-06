@@ -4,11 +4,11 @@ import 'package:flutter_sample_app/feature/detail/ID002_DetailScreen.dart';
 import 'package:flutter_sample_app/feature/top/ID001_TopScreen.dart';
 import 'package:flutter_sample_app/feature/top/item/top_item.dart';
 
-class Router {
+class AppRouter {
   static const Root = '/';
 
   // 外部からインスタンス生成をさせない
-  Router._();
+  AppRouter._();
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
